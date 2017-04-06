@@ -1,0 +1,996 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/braintree/braintree_node"
+
+    >braintree (v2.0.2)</a>
+</h1>
+<h4>A library for integrating with Braintree.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.braintree">module braintree</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.AmexExpressCheckoutCard">
+            function <span class="apidocSignatureSpan">braintree.</span>AmexExpressCheckoutCard
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.AndroidPayCard">
+            function <span class="apidocSignatureSpan">braintree.</span>AndroidPayCard
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.ApplePayCard">
+            function <span class="apidocSignatureSpan">braintree.</span>ApplePayCard
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.CoinbaseAccount">
+            function <span class="apidocSignatureSpan">braintree.</span>CoinbaseAccount
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.CreditCard">
+            function <span class="apidocSignatureSpan">braintree.</span>CreditCard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.CreditCardVerification">
+            function <span class="apidocSignatureSpan">braintree.</span>CreditCardVerification
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.Environment">
+            function <span class="apidocSignatureSpan">braintree.</span>Environment
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.MerchantAccount">
+            function <span class="apidocSignatureSpan">braintree.</span>MerchantAccount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.PayPalAccount">
+            function <span class="apidocSignatureSpan">braintree.</span>PayPalAccount
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.Subscription">
+            function <span class="apidocSignatureSpan">braintree.</span>Subscription
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.TestingGateway">
+            function <span class="apidocSignatureSpan">braintree.</span>TestingGateway
+            <span class="apidocSignatureSpan">(gateway)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.Transaction">
+            function <span class="apidocSignatureSpan">braintree.</span>Transaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.ValidationErrorCodes">
+            function <span class="apidocSignatureSpan">braintree.</span>ValidationErrorCodes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.VenmoAccount">
+            function <span class="apidocSignatureSpan">braintree.</span>VenmoAccount
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.WebhookNotification">
+            function <span class="apidocSignatureSpan">braintree.</span>WebhookNotification
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.braintree.connect">
+            function <span class="apidocSignatureSpan">braintree.</span>connect
+            <span class="apidocSignatureSpan">(new Config(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">braintree.</span>PaymentInstrumentTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">braintree.</span>Test</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">braintree.</span>errorTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">braintree.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.braintree" id="apidoc.module.braintree">module braintree</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.AmexExpressCheckoutCard" id="apidoc.element.braintree.AmexExpressCheckoutCard">
+        function <span class="apidocSignatureSpan">braintree.</span>AmexExpressCheckoutCard
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class AmexExpressCheckoutCard extends AttributeSetter {
+  constructor(attributes) {
+    super(attributes);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.AndroidPayCard" id="apidoc.element.braintree.AndroidPayCard">
+        function <span class="apidocSignatureSpan">braintree.</span>AndroidPayCard
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class AndroidPayCard extends AttributeSetter {
+  constructor(attributes) {
+    super(attributes);
+
+    if (attributes) {
+      this.cardType = attributes.virtualCardType;
+      this.last4 = attributes.virtualCardLast4;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.ApplePayCard" id="apidoc.element.braintree.ApplePayCard">
+        function <span class="apidocSignatureSpan">braintree.</span>ApplePayCard
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ApplePayCard extends AttributeSetter {
+  constructor(attributes) {
+    super(attributes);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.CoinbaseAccount" id="apidoc.element.braintree.CoinbaseAccount">
+        function <span class="apidocSignatureSpan">braintree.</span>CoinbaseAccount
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class CoinbaseAccount extends AttributeSetter {
+  constructor(attributes) {
+    super(attributes);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.CreditCard" id="apidoc.element.braintree.CreditCard">
+        function <span class="apidocSignatureSpan">braintree.</span>CreditCard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class CreditCard extends AttributeSetter {
+  static initClass() {
+    this.CardType = {
+      AmEx: &#x27;American Express&#x27;,
+      CarteBlanche: &#x27;Carte Blanche&#x27;,
+      ChinaUnionPay: &#x27;China UnionPay&#x27;,
+      DinersClubInternational: &#x27;Diners Club&#x27;,
+      Discover: &#x27;Discover&#x27;,
+      JCB: &#x27;JCB&#x27;,
+      Laser: &#x27;Laser&#x27;,
+      Maestro: &#x27;Maestro&#x27;,
+      MasterCard: &#x27;MasterCard&#x27;,
+      Solo: &#x27;Solo&#x27;,
+      Switch: &#x27;Switch&#x27;,
+      Visa: &#x27;Visa&#x27;,
+      Unknown: &#x27;Unknown&#x27;,
+      All() {
+        let all = [];
+
+        for (let key in this) {
+          if (!this.hasOwnProperty(key)) {
+            continue;
+          }
+          let value = this[key];
+
+          if (key !== &#x27;All&#x27;) { all.push(value); }
+        }
+        return all;
+      }
+    };
+
+    this.CustomerLocation = {
+      International: &#x27;international&#x27;,
+      US: &#x27;us&#x27;
+    };
+
+    this.CardTypeIndicator = {
+      Yes: &#x27;Yes&#x27;,
+      No: &#x27;No&#x27;,
+      Unknown: &#x27;Unknown&#x27;
+    };
+
+    this.Prepaid = this.Commercial = this.Payroll = this.Healthcare = this.DurbinRegulated =
+      this.Debit = this.CountryOfIssuance = this.IssuingBank = this.ProductId = this.CardTypeIndicator;
+  }
+
+  constructor(attributes) {
+    super(attributes);
+    this.maskedNumber = `${this.bin}******${this.last4}`;
+    this.expirationDate = `${this.expirationMonth}/${this.expirationYear}`;
+    if (attributes) {
+      let sortedVerifications = (attributes.verifications || []).sort((a, b) =&#x3e; b.created_at - a.created_at);
+
+      if (sortedVerifications[0]) { this.verification = new CreditCardVerification(sortedVerifications[0]); }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.CreditCardVerification" id="apidoc.element.braintree.CreditCardVerification">
+        function <span class="apidocSignatureSpan">braintree.</span>CreditCardVerification
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class CreditCardVerification extends AttributeSetter {
+  static initClass() {
+    this.StatusType = {
+      Failed: &#x27;failed&#x27;,
+      GatewayRejected: &#x27;gateway_rejected&#x27;,
+      ProcessorDeclined: &#x27;processor_declined&#x27;,
+      Verified: &#x27;verified&#x27;,
+      All() {
+        let all = [];
+
+        for (let key in this) {
+          if (!this.hasOwnProperty(key)) {
+            continue;
+          }
+          let value = this[key];
+
+          if (key !== &#x27;All&#x27;) { all.push(value); }
+        }
+        return all;
+      }
+    };
+  }
+
+  constructor(attributes) {
+    super(attributes);
+    if (attributes.riskData) { this.riskData = new RiskData(attributes.riskData); }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.Environment" id="apidoc.element.braintree.Environment">
+        function <span class="apidocSignatureSpan">braintree.</span>Environment
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Environment {
+  static initClass() {
+    DEVELOPMENT_PORT = process.env.GATEWAY_PORT || &#x27;3000&#x27;;
+    this.Development = new Environment(&#x27;localhost&#x27;, DEVELOPMENT_PORT, &#x27;http://auth.venmo.dev:9292&#x27;, false);
+    this.Qa = new Environment(&#x27;gateway.qa.braintreepayments.com&#x27;, &#x27;443&#x27;, &#x27;https://auth.venmo.qa2.braintreegateway.com&#x27;, true);
+    this.Sandbox = new Environment(&#x27;api.sandbox.braintreegateway.com&#x27;, &#x27;443&#x27;, &#x27;https://auth.sandbox.venmo.com&#x27;, true);
+    this.Production = new Environment(&#x27;api.braintreegateway.com&#x27;, &#x27;443&#x27;, &#x27;https://auth.venmo.com&#x27;, true);
+  }
+
+  constructor(server, port, authUrl, ssl) {
+    this.server = server;
+    this.port = port;
+    this.authUrl = authUrl;
+    this.ssl = ssl;
+  }
+
+  baseUrl() {
+    let url = this.uriScheme() + this.server;
+
+    if (this === Environment.Development) {
+      url += `:${this.port}`;
+    }
+
+    return url;
+  }
+
+  uriScheme() {
+    return this.ssl ? &#x27;https://&#x27; : &#x27;http://&#x27;;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.MerchantAccount" id="apidoc.element.braintree.MerchantAccount">
+        function <span class="apidocSignatureSpan">braintree.</span>MerchantAccount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MerchantAccount extends AttributeSetter {
+  static initClass() {
+    this.Status = {
+      Pending: &#x27;pending&#x27;,
+      Active: &#x27;active&#x27;,
+      Suspended: &#x27;suspended&#x27;
+    };
+
+    this.FundingDestination = {
+      Bank: &#x27;bank&#x27;,
+      Email: &#x27;email&#x27;,
+      MobilePhone: &#x27;mobile_phone&#x27;
+    };
+  }
+
+  constructor(attributes) {
+    super(attributes);
+    if (attributes.masterMerchantAccount) {
+      this.masterMerchantAccount = new MerchantAccount(attributes.masterMerchantAccount);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.PayPalAccount" id="apidoc.element.braintree.PayPalAccount">
+        function <span class="apidocSignatureSpan">braintree.</span>PayPalAccount
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class PayPalAccount extends AttributeSetter {
+  constructor(attributes) {
+    super(attributes);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.Subscription" id="apidoc.element.braintree.Subscription">
+        function <span class="apidocSignatureSpan">braintree.</span>Subscription
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Subscription extends AttributeSetter {
+  static initClass() {
+    this.Source = {
+      Api: &#x27;api&#x27;,
+      ControlPanel: &#x27;control_panel&#x27;,
+      Recurring: &#x27;recurring&#x27;
+    };
+
+    this.Status = {
+      Active: &#x27;Active&#x27;,
+      Canceled: &#x27;Canceled&#x27;,
+      Expired: &#x27;Expired&#x27;,
+      PastDue: &#x27;Past Due&#x27;,
+      Pending: &#x27;Pending&#x27;,
+      All() {
+        let all = [];
+
+        for (let key in this) {
+          if (!this.hasOwnProperty(key)) {
+            continue;
+          }
+          let value = this[key];
+
+          if (key !== &#x27;All&#x27;) { all.push(value); }
+        }
+        return all;
+      }
+    };
+  }
+
+  constructor(attributes) {
+    super(attributes);
+    this.transactions = attributes.transactions.map((transactionAttributes) =&#x3e; new Transaction(transactionAttributes));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.TestingGateway" id="apidoc.element.braintree.TestingGateway">
+        function <span class="apidocSignatureSpan">braintree.</span>TestingGateway
+        <span class="apidocSignatureSpan">(gateway)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class TestingGateway extends Gateway {
+  constructor(gateway) {
+    super();
+    this.gateway = gateway;
+    this.config = this.gateway.config;
+  }
+
+  settle(transactionId, callback) {
+    return this.settlementOperationWithEnvironmentCheck(transactionId, &#x27;settle&#x27;, callback);
+  }
+
+  settlementPending(transactionId, callback) {
+    return this.settlementOperationWithEnvironmentCheck(transactionId, &#x27;settlement_pending&#x27;, callback);
+  }
+
+  settlementConfirm(transactionId, callback) {
+    return this.settlementOperationWithEnvironmentCheck(transactionId, &#x27;settlement_confirm&#x27;, callback);
+  }
+
+  settlementDecline(transactionId, callback) {
+    return this.settlementOperationWithEnvironmentCheck(transactionId, &#x27;settlement_decline&#x27;, callback);
+  }
+
+  settlementOperationWithEnvironmentCheck(transactionId, operation, callback) {
+    if (this.config.environment === Environment.Production) {
+      return callback(exceptions.TestOperationPerformedInProductionError(&#x27;Test operation performed in production&#x27;), null); // eslint
+-disable-line new-cap
+    }
+
+    return this.gateway.http.put(
+      `${this.config.baseMerchantPath()}/transactions/${transactionId}/${operation}`,
+      null,
+      callback
+    );
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.Transaction" id="apidoc.element.braintree.Transaction">
+        function <span class="apidocSignatureSpan">braintree.</span>Transaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Transaction extends AttributeSetter {
+  static initClass() {
+    this.CreatedUsing = {
+      FullInformation: &#x27;full_information&#x27;,
+      Token: &#x27;token&#x27;
+    };
+
+    this.EscrowStatus = {
+      HoldPending: &#x27;hold_pending&#x27;,
+      Held: &#x27;held&#x27;,
+      ReleasePending: &#x27;release_pending&#x27;,
+      Released: &#x27;released&#x27;,
+      Refunded: &#x27;refunded&#x27;
+    };
+
+    this.Source = {
+      Api: &#x27;api&#x27;,
+      ControlPanel: &#x27;control_panel&#x27;,
+      Recurring: &#x27;recurring&#x27;
+    };
+
+    this.Type = {
+      Credit: &#x27;credit&#x27;,
+      Sale: &#x27;sale&#x27;,
+      All() {
+        let all = [];
+
+        for (let key in this) {
+          if (!this.hasOwnProperty(key)) {
+            continue;
+          }
+          let value = this[key];
+
+          if (key !== &#x27;All&#x27;) { all.push(value); }
+        }
+        return all;
+      }
+    };
+
+    this.GatewayRejectionReason = {
+      ApplicationIncomplete: &#x27;application_incomplete&#x27;,
+      Avs: &#x27;avs&#x27;,
+      Cvv: &#x27;cvv&#x27;,
+      AvsAndCvv: &#x27;avs_and_cvv&#x27;,
+      Duplicate: &#x27;duplicate&#x27;,
+      Fraud: &#x27;fraud&#x27;,
+      ThreeDSecure: &#x27;three_d_secure&#x27;
+    };
+
+    this.IndustryData = {
+      Lodging: &#x27;lodging&#x27;,
+      TravelAndCruise: &#x27;travel_cruise&#x27;
+    };
+
+    this.Status = {
+      AuthorizationExpired: &#x27;authorization_expired&#x27;,
+      Authorizing: &#x27;authorizing&#x27;,
+      Authorized: &#x27;authorized&#x27;,
+      GatewayRejected: &#x27;gateway_rejected&#x27;,
+      Failed: &#x27;failed&#x27;,
+      ProcessorDeclined: &#x27;processor_declined&#x27;,
+      Settled: &#x27;settled&#x27;,
+      Settling: &#x27;settling&#x27;,
+      SettlementConfirmed: &#x27;settlement_confirmed&#x27;,
+      SettlementDeclined: &#x27;settlement_declined&#x27;,
+      SettlementPending: &#x27;settlement_pending&#x27;,
+      SubmittedForSettlement: &#x27;submitted_for_settlement&#x27;,
+      Voided: &#x27;voided&#x27;,
+      All() {
+        let all = [];
+
+        for (let key in this) {
+          if (!this.hasOwnProperty(key)) {
+            continue;
+          }
+          let value = this[key];
+
+          if (key !== &#x27;All&#x27;) { all.push(value); }
+        }
+        return all;
+      }
+    };
+  }
+
+  constructor(attributes) {
+    super(attributes);
+    this.creditCard = new CreditCard(attributes.creditCard);
+    this.paypalAccount = new PayPalAccount(attributes.paypal);
+    this.coinbaseAccount = new CoinbaseAccount(attributes.coinbaseAccount);
+    this.applePayCard = new ApplePayCard(attributes.applePay);
+    this.androidPayCard = new AndroidPayCard(attributes.androidPayCard);
+    this.disbursementDetails = new DisbursementDetails(attributes.disbursementDetails);
+    if (attributes.disputes != null) { this.disputes = attributes.disputes.map((disputeAttributes) =&#x3e; new Dispute(disputeAttributes
+)); }
+    if (attributes.facilitatorDetails) { this.facilitatorDetails = new FacilitatorDetails(attributes.facilitatorDetails); }
+    if (attributes.riskData) { this.riskData = new RiskData(attributes.riskData); }
+    if (attributes.threeDSecureInfo) { this.threeDSecureInfo = new ThreeDSecureInfo(attributes.threeDSecureInfo); }
+    if (attributes.usBankAccount) { this.usBankAccount = new UsBankAccount(attributes.usBankAccount); }
+  }
+
+  isDisbursed() {
+    return this.disbursementDetails.isValid();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.ValidationErrorCodes" id="apidoc.element.braintree.ValidationErrorCodes">
+        function <span class="apidocSignatureSpan">braintree.</span>ValidationErrorCodes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ValidationErrorCodes {
+  static initClass() {
+    this.Address = {
+      CannotBeBlank: &#x27;81801&#x27;,
+      CompanyIsInvalid: &#x27;91821&#x27;,
+      CompanyIsTooLong: &#x27;81802&#x27;,
+      CountryCodeAlpha2IsNotAccepted: &#x27;91814&#x27;,
+      CountryCodeAlpha3IsNotAccepted: &#x27;91816&#x27;,
+      CountryCodeNumericIsNotAccepted: &#x27;91817&#x27;,
+      CountryNameIsNotAccepted: &#x27;91803&#x27;,
+      ExtendedAddressIsInvalid: &#x27;91823&#x27;,
+      ExtendedAddressIsTooLong: &#x27;81804&#x27;,
+      FirstNameIsInvalid: &#x27;91819&#x27;,
+      FirstNameIsTooLong: &#x27;81805&#x27;,
+      InconsistentCountry: &#x27;91815&#x27;,
+      IsInvalid: &#x27;91828&#x27;,
+      LastNameIsInvalid: &#x27;91820&#x27;,
+      LastNameIsTooLong: &#x27;81806&#x27;,
+      LocalityIsInvalid: &#x27;91824&#x27;,
+      LocalityIsTooLong: &#x27;81807&#x27;,
+      PostalCodeInvalidCharacters: &#x27;81813&#x27;,
+      PostalCodeIsInvalid: &#x27;91826&#x27;,
+      PostalCodeIsRequired: &#x27;81808&#x27;,
+      PostalCodeIsTooLong: &#x27;81809&#x27;,
+      RegionIsInvalid: &#x27;91825&#x27;,
+      RegionIsTooLong: &#x27;81810&#x27;,
+      StateIsInvalidForSellerProtection: &#x27;81827&#x27;,
+      StreetAddressIsInvalid: &#x27;91822&#x27;,
+      StreetAddressIsRequired: &#x27;81811&#x27;,
+      StreetAddressIsTooLong: &#x27;81812&#x27;,
+      TooManyAddressesPerCustomer: &#x27;91818&#x27;
+    };
+
+    this.ApplePayCard = {
+      ApplePayCardsAreNotAccepted: &#x27;83501&#x27;,
+      CustomerIdIsRequiredForVaulting: &#x27;83502&#x27;,
+      TokenIsInUse: &#x27;93503&#x27;,
+      PaymentMethodNonceConsumed: &#x27;93504&#x27;,
+      PaymentMethodNonceUnknown: &#x27;93505&#x27;,
+      PaymentMethodNonceLocked: &#x27;93506&#x27;,
+      PaymentMethodNonceCardTypeIsNotAccepted: &#x27;83518&#x27;,
+      CannotUpdateApplePayCardUsingPaymentMethodNonce: &#x27;93507&#x27;,
+      NumberIsRequired: &#x27;93508&#x27;,
+      ExpirationMonthIsRequired: &#x27;93509&#x27;,
+      ExpirationYearIsRequired: &#x27;93510&#x27;,
+      CryptogramIsRequired: &#x27;93511&#x27;,
+      DecryptionFailed: &#x27;83512&#x27;,
+      Disabled: &#x27;93513&#x27;,
+      MerchantNotConfigured: &#x27;93514&#x27;,
+      MerchantKeysAlreadyConfigured: &#x27;93515&#x27;,
+      MerchantKeysNotConfigured: &#x27;93516&#x27;,
+      CertificateInvalid: &#x27;93517&#x27;,
+      CertificateMismatch: &#x27;93519&#x27;,
+      InvalidToken: &#x27;83520&#x27;,
+      PrivateKeyMismatch: &#x27;93521&#x27;,
+      KeyMismatchStoringCertificate: &#x27;93522&#x27;
+    };
+
+    this.AuthorizationFingerprint = {
+      InvalidCreatedAt: &#x27;93204&#x27;,
+      InvalidFormat: &#x27;93202&#x27;,
+      InvalidPublicKey: &#x27;93205&#x27;,
+      InvalidSignature: &#x27;93206&#x27;,
+      MissingFingerprint: &#x27;93201&#x27;,
+      OptionsNotAllowedWithoutCustomer: &#x27;93207&#x27;,
+      SignatureRevoked: &#x27;93203&#x27;
+    };
+
+    this.ClientToken = {
+      CustomerDoesNotExist: &#x27;92804&#x27;,
+      FailOnDuplicatePaymentMethodRequiresCustomerId: &#x27;92803&#x27;,
+      MakeDefaultRequiresCustomerId: &#x27;92801&#x27;,
+      ProxyMerchantDoesNotExist: &#x27;92805&#x27;,
+      VerifyCardRequiresCustomerId: &#x27;92802&#x27;,
+      MerchantAccountDoesNotExist: &#x27;92807&#x27;,
+      UnsupportedVersion: &#x27;92806&#x27;
+    };
+
+    this.CreditCard = {
+      BillingAddressConflict: &#x27;91701&#x27;,
+      BillingAddressFormatIsInvalid: &#x27;91744&#x27;,
+      BillingAddressIdIsInvalid: &#x27;91702&#x27;,
+      CannotUpdateCardUsingPaymentMethodNonce: &#x27;91735&#x27;,
+      CardholderNameIsTooLong: &#x27;81723&#x27;,
+      CreditCardTypeIsNotAccepted: &#x27;81703&#x27;,
+      CreditCardTypeIsNotAcceptedBySubscriptionMerchantAccount: &#x27;81718&#x27;,
+      CustomerIdIsInvalid: &#x27;91705&#x27;,
+      CustomerIdIsRequired: &#x27;91704&#x27;,
+      CvvIsInvalid: &#x27;81707&#x27;,
+      CvvIsRequired: &#x27;81706&#x27;,
+      CvvVerificationFailed: &#x27;81736&#x27;,
+      DuplicateCardExists: &#x27;81724&#x27;,
+      ExpirationDateConflict: &#x27;91708&#x27;,
+      ExpirationDateIsInvalid: &#x27;81710&#x27;,
+      ExpirationDateIsRequired: &#x27;81709&#x27;,
+      ExpirationDateYearIsInvalid: &#x27;81711&#x27;,
+      ExpirationMonthIsInvalid: &#x27;81712&#x27;,
+      ExpirationYearIsInvalid: &#x27;81713&#x27;,
+      InvalidParamsForCreditCardUpdate: &#x27;91745&#x27;,
+      InvalidVenmoSDKPaymentMethodCode: &#x27;91727&#x27;,
+      NumberHasInvalidLength: &#x27;81716&#x27;,
+      NumberIsInvalid: &#x27;81715&#x27;,
+      NumberIsProhibited: &#x27;81750&#x27;,
+      NumberIsRequired: &#x27;81714&#x27;,
+      NumberLengthIsInvalid: &#x27;81716&#x27;,
+      NumberMustBeTestNumber: &#x27;81717&#x27;,
+      PaymentMethodConflict: &#x27;81725&#x27;,
+      PaymentMethodIsNotACreditCard: &#x27;91738&#x27;,
+      PaymentMethodNonceCardTypeIsNotAccepted: &#x27;91734&#x27;,
+      PaymentMethodNonceConsumed: &#x27;91731&#x27;,
+      PaymentMethodNonceLocked: &#x27;91733&#x27;,
+      PaymentMethodNonceUnknown: &#x27;91732&#x27;,
+      Post ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.VenmoAccount" id="apidoc.element.braintree.VenmoAccount">
+        function <span class="apidocSignatureSpan">braintree.</span>VenmoAccount
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class VenmoAccount extends AttributeSetter {
+  constructor(attributes) {
+    super(attributes);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.WebhookNotification" id="apidoc.element.braintree.WebhookNotification">
+        function <span class="apidocSignatureSpan">braintree.</span>WebhookNotification
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class WebhookNotification extends AttributeSetter {
+  static initClass() {
+    this.Kind = {
+      AccountUpdaterDailyReport: &#x27;account_updater_daily_report&#x27;,
+      Check: &#x27;check&#x27;,
+      Disbursement: &#x27;disbursement&#x27;,
+      DisbursementException: &#x27;disbursement_exception&#x27;,
+      DisputeOpened: &#x27;dispute_opened&#x27;,
+      DisputeLost: &#x27;dispute_lost&#x27;,
+      DisputeWon: &#x27;dispute_won&#x27;,
+      PartnerMerchantConnected: &#x27;partner_merchant_connected&#x27;,
+      PartnerMerchantDisconnected: &#x27;partner_merchant_disconnected&#x27;,
+      PartnerMerchantDeclined: &#x27;partner_merchant_declined&#x27;,
+      SubscriptionCanceled: &#x27;subscription_canceled&#x27;,
+      SubscriptionChargedSuccessfully: &#x27;subscription_charged_successfully&#x27;,
+      SubscriptionChargedUnsuccessfully: &#x27;subscription_charged_unsuccessfully&#x27;,
+      SubscriptionExpired: &#x27;subscription_expired&#x27;,
+      SubscriptionTrialEnded: &#x27;subscription_trial_ended&#x27;,
+      SubscriptionWentActive: &#x27;subscription_went_active&#x27;,
+      SubscriptionWentPastDue: &#x27;subscription_went_past_due&#x27;,
+      SubMerchantAccountApproved: &#x27;sub_merchant_account_approved&#x27;,
+      SubMerchantAccountDeclined: &#x27;sub_merchant_account_declined&#x27;,
+      TransactionDisbursed: &#x27;transaction_disbursed&#x27;,
+      TransactionSettled: &#x27;transaction_settled&#x27;,
+      TransactionSettlementDeclined: &#x27;transaction_settlement_declined&#x27;
+    };
+  }
+
+  constructor(attributes) {
+    super(attributes);
+
+    let wrapperNode;
+
+    if (attributes.subject.apiErrorResponse != null) {
+      wrapperNode = attributes.subject.apiErrorResponse;
+    } else {
+      wrapperNode = attributes.subject;
+    }
+
+    if (wrapperNode.subscription != null) {
+      this.subscription = new Subscription(wrapperNode.subscription);
+    }
+
+    if (wrapperNode.merchantAccount != null) {
+      this.merchantAccount = new MerchantAccount(wrapperNode.merchantAccount);
+    }
+
+    if (wrapperNode.disbursement != null) {
+      this.disbursement = new Disbursement(wrapperNode.disbursement);
+    }
+
+    if (wrapperNode.transaction != null) {
+      this.transaction = new Transaction(wrapperNode.transaction);
+    }
+
+    if (wrapperNode.partnerMerchant != null) {
+      this.partnerMerchant = new PartnerMerchant(wrapperNode.partnerMerchant);
+    }
+
+    if (wrapperNode.dispute != null) {
+      this.dispute = new Dispute(wrapperNode.dispute);
+    }
+
+    if (wrapperNode.accountUpdaterDailyReport != null) {
+      this.accountUpdaterDailyReport = new AccountUpdaterDailyReport(wrapperNode.accountUpdaterDailyReport);
+    }
+
+    if (wrapperNode.errors != null) {
+      this.errors = new ValidationErrorsCollection(wrapperNode.errors);
+      this.message = wrapperNode.message;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.braintree.connect" id="apidoc.element.braintree.connect">
+        function <span class="apidocSignatureSpan">braintree.</span>connect
+        <span class="apidocSignatureSpan">(new Config(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">config =&#x3e; new BraintreeGateway(new Config(config))</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* [Documentation](https://developers.braintreepayments.com/node/sdk/server/overview)
+* [Bug Tracker](http://github.com/braintree/braintree_node/issues)
+
+## Quick Start
+```javascript
+var braintree = require(&#x27;braintree&#x27;);
+
+var gateway = braintree.<span class="apidocCodeKeywordSpan">connect</span>({
+  environment: braintree.Environment.Sandbox,
+  merchantId: &#x27;your_merchant_id&#x27;,
+  publicKey: &#x27;your_public_key&#x27;,
+  privateKey: &#x27;your_private_key&#x27;
+});
+
+gateway.transaction.sale({
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
