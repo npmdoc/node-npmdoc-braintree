@@ -1,19 +1,22 @@
-<svg height="254" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="254" fill="#555" width="720"></rect>
+<svg height="302" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="302" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ braintree@2.0.2 </tspan>
-<tspan x="10" y="42">  ├── dateformat@1.0.1-1.2.3 </tspan>
-<tspan x="10" y="58">  ├── depd@1.1.0 </tspan>
-<tspan x="10" y="74">  ├─┬ readable-stream@1.1.10 </tspan>
-<tspan x="10" y="90">  │ ├── core-util-is@1.0.2 </tspan>
-<tspan x="10" y="106">  │ ├── debuglog@0.0.2 </tspan>
-<tspan x="10" y="122">  │ └── string_decoder@0.10.31 </tspan>
-<tspan x="10" y="138">  ├── semver@5.1.0 </tspan>
-<tspan x="10" y="154">  ├─┬ source-map-support@0.2.9 </tspan>
-<tspan x="10" y="170">  │ └─┬ source-map@0.1.32 </tspan>
-<tspan x="10" y="186">  │   └── amdefine@1.0.1 </tspan>
-<tspan x="10" y="202">  ├── underscore@1.8.3 </tspan>
-<tspan x="10" y="218">  └─┬ xml2js@0.1.13 </tspan>
-<tspan x="10" y="234">    └── sax@1.2.2</tspan>
+<tspan x="10" y="26">2 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ braintree@2.0.2 </tspan>
+<tspan x="10" y="90">  ├── dateformat@1.0.1-1.2.3 </tspan>
+<tspan x="10" y="106">  ├── depd@1.1.0 </tspan>
+<tspan x="10" y="122">  ├─┬ readable-stream@1.1.10 </tspan>
+<tspan x="10" y="138">  │ ├── core-util-is@1.0.2 </tspan>
+<tspan x="10" y="154">  │ ├── debuglog@0.0.2 </tspan>
+<tspan x="10" y="170">  │ └── string_decoder@0.10.31 </tspan>
+<tspan x="10" y="186">  ├── semver@5.1.0 </tspan>
+<tspan x="10" y="202">  ├─┬ source-map-support@0.2.9 </tspan>
+<tspan x="10" y="218">  │ └─┬ source-map@0.1.32 </tspan>
+<tspan x="10" y="234">  │   └── amdefine@1.0.1 </tspan>
+<tspan x="10" y="250">  ├── underscore@1.8.3 </tspan>
+<tspan x="10" y="266">  └─┬ xml2js@0.1.13 </tspan>
+<tspan x="10" y="282">    └── sax@1.2.2</tspan>
 </text>
 </svg>
