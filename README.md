@@ -1,6 +1,6 @@
 # npmdoc-braintree
 
-#### api documentation for  [braintree (v2.0.2)](http://github.com/braintree/braintree_node)  [![npm package](https://img.shields.io/npm/v/npmdoc-braintree.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-braintree) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-braintree.svg)](https://travis-ci.org/npmdoc/node-npmdoc-braintree)
+#### basic api documentation for  [braintree (v2.0.2)](http://github.com/braintree/braintree_node)  [![npm package](https://img.shields.io/npm/v/npmdoc-braintree.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-braintree) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-braintree.svg)](https://travis-ci.org/npmdoc/node-npmdoc-braintree)
 
 #### A library for integrating with Braintree.
 
@@ -82,7 +82,8 @@
         "test:integration": "mocha --timeout 60000 --slow 2000 spec/integration --recursive --compilers coffee:coffee-script",
         "test:unit": "mocha spec/unit --recursive --compilers coffee:coffee-script"
     },
-    "version": "2.0.2"
+    "version": "2.0.2",
+    "bin": {}
 }
 ```
 
